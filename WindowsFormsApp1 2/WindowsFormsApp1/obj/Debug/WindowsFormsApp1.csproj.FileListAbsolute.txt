@@ -41,3 +41,13 @@ C:\Users\truespirit7\Desktop\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Windows
 \\iscsi\profiles\AndreevDA\Desktop\WindowsFormsApp1 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 \\iscsi\profiles\AndreevDA\Desktop\WindowsFormsApp1 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 \\iscsi\profiles\AndreevDA\Desktop\WindowsFormsApp1 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\trues\Desktop\AndreevDA\WindowsFormsApp1 2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\trues\Desktop\AndreevDA\WindowsFormsApp1 2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\trues\Desktop\AndreevDA\WindowsFormsApp1 2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\trues\Desktop\AndreevDA\WindowsFormsApp1 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\trues\Desktop\AndreevDA\WindowsFormsApp1 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\trues\Desktop\AndreevDA\WindowsFormsApp1 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\Users\trues\Desktop\AndreevDA\WindowsFormsApp1 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\trues\Desktop\AndreevDA\WindowsFormsApp1 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\trues\Desktop\AndreevDA\WindowsFormsApp1 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\trues\Desktop\AndreevDA\WindowsFormsApp1 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

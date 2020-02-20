@@ -23,18 +23,8 @@ namespace WindowsFormsApp1
 
         string [] textSplit;
         bool CompleteEqual = false;
-        //string text = "5+2";
-        //void check()
-        //{
-        //    var s = text.Split('+');
-        //    foreach (string text in s)
-        //    {
-        //        var number = Int32.Parse(text);
-        //    }
-        //}
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
-            string [] checkTextSplit = textBox1.Text.Split(new char[] { '+', '-', '*', '/', '=' });
             if (textBox1.Text == "")
             {
                 CompleteEqual = false;
@@ -92,29 +82,26 @@ namespace WindowsFormsApp1
                             double sum = Convert.ToDouble(textSplit[0]) + Convert.ToDouble(textSplit[1]);
                             CompleteEqual = true;
                             textBox1.Text += sum.ToString();
-                            sign = '#';
                         }
                         if (sign == '-')
                         {
                             double sum = Convert.ToDouble(textSplit[0]) - Convert.ToDouble(textSplit[1]);
                             CompleteEqual = true;
                             textBox1.Text += sum.ToString();
-                            sign = '#';
                         }
                         if (sign == '*')
                         {
                             double sum = Convert.ToDouble(textSplit[0]) * Convert.ToDouble(textSplit[1]);
                             CompleteEqual = true;
                             textBox1.Text += sum.ToString();
-                            sign = '#';
                         }
                         if (sign == '/')
                         {
                             double sum = Convert.ToDouble(textSplit[0]) / Convert.ToDouble(textSplit[1]);
                             CompleteEqual = true;
                             textBox1.Text += sum.ToString();
-                            sign = '#';
                         }
+                        sign = '#';
 
                     }
                 }
