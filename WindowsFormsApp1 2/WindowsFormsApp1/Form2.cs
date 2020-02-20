@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,112 +8,127 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace Pol
 {
     public partial class Form2 : Form
     {
-
-       
-
         public Form2()
         {
             InitializeComponent();
         }
+        
 
 
-        string [] textSplit;
-        bool CompleteEqual = false;
+        private char GetSign(char character)
+        {
+
+                
+
+            return character;
+        }
+
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
-            {
-                CompleteEqual = false;
-            }
-            if (!textBox1.Text.Equals("") && CompleteEqual == false)
-            {
-                string text = textBox1.Text;
-                textSplit = text.Split(new char[] { '+', '-', '*', '/', '=' });
-                string textEqual = textBox1.Text;
-                textEqual.Split('=');
-                int i = 0;
-                char sign = '#';
-                char CheckQueryEqual = '#';
+            string first = textBox1.Text;
+            char ch = ' ';
 
-                foreach (var symbol in text)
+            if ((!textBox1.Text.Equals("")) && (!textBox1.Text.EndsWith("=")))
+            {
+                List<double> list = new List<double>();
+                first.Replace(" ", "");
+
+                var s = first;
+                
+                foreach (var sign in s)
                 {
-                    try
+                    
+                    if (sign == '+')
                     {
-                        int number = Int32.Parse(symbol + "");
-                        Console.WriteLine(symbol);
-                        Console.WriteLine(number);
+                        ch = '+';
                     }
-
-
-                    catch (FormatException ex)
+                    if (sign == '*')
                     {
-
-                        if (symbol == '+')
-                        {
-                            sign = '+';
-                        }
-                        if (symbol == '-')
-                        {
-                            sign = '-';
-                        }
-                        if (symbol == '*')
-                        {
-                            sign = '*';
-                        }
-                        if (symbol == '/')
-                        {
-                            sign = '/';
-                        }
-                        if (symbol == '=')
-                        {
-                            CheckQueryEqual = '=';
-                        }
-                        Console.WriteLine(ex);
+                        ch ='*';
                     }
-
-                    if (CheckQueryEqual == '=')
+                    if (sign == '/')
                     {
-                        if (sign == '+')
-                        {
-                            double sum = Convert.ToDouble(textSplit[0]) + Convert.ToDouble(textSplit[1]);
-                            CompleteEqual = true;
-                            textBox1.Text += sum.ToString();
-                        }
-                        if (sign == '-')
-                        {
-                            double sum = Convert.ToDouble(textSplit[0]) - Convert.ToDouble(textSplit[1]);
-                            CompleteEqual = true;
-                            textBox1.Text += sum.ToString();
-                        }
-                        if (sign == '*')
-                        {
-                            double sum = Convert.ToDouble(textSplit[0]) * Convert.ToDouble(textSplit[1]);
-                            CompleteEqual = true;
-                            textBox1.Text += sum.ToString();
-                        }
-                        if (sign == '/')
-                        {
-                            double sum = Convert.ToDouble(textSplit[0]) / Convert.ToDouble(textSplit[1]);
-                            CompleteEqual = true;
-                            textBox1.Text += sum.ToString();
-                        }
-                        sign = '#';
-
+                        ch= '/';
                     }
+                    if (sign == '-')
+                    {
+                        ch = '-';
+                    }
+                    if (sign == '=')
+                    {
+                        ch = '=';
+                    }
+                    var stringArray = s.Split(new char[] { '+', '-', '*', '/' });
+                    foreach (var text in stringArray)
+                    {
+                        if (!text.Equals(""))
+                        {
+                            Console.WriteLine("ret" + ch);
+                            double number = double.Parse(text);
+                            Console.WriteLine(number);
+
+                            list.Add(number);
+                            //if (Array[0] == 0)
+                            //{
+                            //    Array[0] = number;
+                            //}
+                            //else
+                            //{
+                            //    Array[1] = number;
+                            //}
+                        }
+                        
+                           
+                    }
+                    
+                }
+                Console.WriteLine("ret" + ch);
+                label1.Text = "0";
+                if (ch == '+')
+
+                {
+
+                    double sum = list[0] + list[1];
+                    label1.Text = (Convert.ToString(sum));
+
+
+                }
+
+                if (ch == '-')
+                {
+
+                    double minus = list[0] - list[1];
+                    label1.Text = (Convert.ToString(minus));
+
+
+                }
+
+                if (ch == '*')
+                {
+
+                    double multiply = list[0] * list[1];
+                    label1.Text = (Convert.ToString(multiply));
+
+
+                }
+
+                if (ch == '/')
+                {
+
+                    double devide = list[0] / list[1];
+                    label1.Text = (Convert.ToString(devide));
+
+
                 }
             }
-
-
+                 
+                
+            
+            
         }
- 
-
-private void Form2_Load(object sender, EventArgs e)
-{
-
-}
     }
 }
